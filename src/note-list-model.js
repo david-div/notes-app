@@ -1,19 +1,19 @@
 (function(exports){
 
-  function NotePad(){
+  function NoteList(){
     this.notes = []
   };
 
-  NotePad.prototype.addNote = function (note) {
+  NoteList.prototype.addNote = function (note) {
     this.notes.push(note)
   };
 
-  NotePad.prototype.showNotes = function(){
+  NoteList.prototype.showNotes = function(){
     for (var i = 0; i < this.notes.length; i ++ ){
       console.log(this.notes[i])
     }
   }
 
-exports.NotePad = NotePad;
+exports.NoteList = NoteList;
 
 })(this);
