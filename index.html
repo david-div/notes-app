@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Note Pad app</title>
-    <script src ="../src/note-list-model.js"></script>
-    <script src ="../spec/spec-helper.js"></script>
-    <script src ="../spec/note-lm-spec.js"></script>
+
   </head>
 
   <body>
@@ -13,9 +11,25 @@
     <div id="app"> Hello </div>
     <ul id="list">
     </ul>
-    <script src ="../src/note-list-view.js"></script>
-    <script src ="../spec/note-lv-spec.js"></script>
-    <script src ="../src/note-list-controller.js"></script>
+
+    <script src ="./src/note-list-model.js"></script>
+    <script src ="./src/note-list-view.js"></script>
+    <script src ="./src/note-controller.js"></script>
+    <script src ="./spec/spec-helper.js"></script>
+    <script src ="./spec/note-lv-spec.js"></script>
+    <script src ="./spec/note-lm-spec.js"></script>
+
+    <script>
+
+    const noteList = new NoteList()
+    noteList.addNote('Note 1')
+    console.log(noteList.notes)
+
+    const noteController = new NoteController(noteList.notes)
+    noteController.printToDOM();
+
+
+    </script>
 
   </body>
 </html>

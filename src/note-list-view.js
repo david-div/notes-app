@@ -8,7 +8,7 @@
   }
 
   NoteListView.prototype.printListToHTML = function() {
-    list.innerHTML = "<li><div>" + this.noteList + "</div></li>"
+    list.innerHTML = "<li>" + this.noteList + "</li>"
   }
 
   exports.NoteListView = NoteListView;
