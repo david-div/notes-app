@@ -1,4 +1,3 @@
-
 (function(exports) {
 
   const list = document.getElementById('list')
