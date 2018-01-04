@@ -12,21 +12,16 @@
     <ul id="list">
     </ul>
 
-    <script src ="./src/note-list-model.js"></script>
+    <script src ="./src/note-model.js"></script>
     <script src ="./src/note-list-view.js"></script>
     <script src ="./src/note-controller.js"></script>
     <script src ="./spec/spec-helper.js"></script>
     <script src ="./spec/note-list-view-spec.js"></script>
-    <script src ="./spec/note-list-model-spec.js"></script>
+    <script src ="./spec/note-model-spec.js"></script>
 
     <script>
 
-    const noteList = new NoteList()
-    noteList.addNote('Note 1')
-    console.log(noteList.notes)
 
-    const noteController = new NoteController(noteList.notes)
-    noteController.printToDOM();
 
 
     </script>
