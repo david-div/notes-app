@@ -26,9 +26,11 @@
       console.log(noteList.notes[0].text)
       console.log(noteList.notes.length)
 
-
       noteListView = new NoteListView(noteList)
-      console.log(noteListView.getNotesView())
+      noteController = new NoteController(noteList)
+      console.log(noteController)
+      noteController.addToHTML();
+
 
 
 

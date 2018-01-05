@@ -1,12 +1,14 @@
 (function(exports){
 
+  const app = document.getElementById('app')
+
   function NoteController(noteList){
     this.noteList = noteList
+    this.view = new NoteListView(noteList)
   }
 
-  NoteController.prototype.printToDOM = function () {
-    const noteListView = new NoteListView(this.noteList)
-    noteListView.printListToHTML();
+  NoteController.prototype.addToHTML = function () {
+    app.innerHTML = this.view.getNotesView();
   };
 
   exports.NoteController = NoteController;
