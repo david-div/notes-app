@@ -1,12 +1,16 @@
 (function(exports){
 
   const list = document.getElementById('list')
-  const note = new Note("Note 1")
-  const noteListView = new NoteListView(note.getText())
+
+  const noteList = new NoteList()
+  noteList.addNote("Note 1")
+  noteList.addNote("Note 2")
+
+  const noteListView = new NoteListView(noteList)
 
   function getNotesViewTest(){
     var view = noteListView.getNotesView()
-    assert.isEqualTo(view, "<li>Note 1<li>")
+    assert.isEqualTo(view, "<li>Note 1<li><li>Note 2<li>")
   }
 
   getNotesViewTest();

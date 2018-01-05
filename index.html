@@ -23,6 +23,17 @@
 
     <script>
 
+      noteList = new NoteList()
+      noteList.addNote("Note 1")
+      noteList.addNote("Note 2")
+
+      console.log(noteList.notes)
+      console.log(noteList.notes[0].text)
+      console.log(noteList.notes.length)
+
+
+      noteListView = new NoteListView(noteList)
+      console.log(noteListView.getNotesView())
 
 
 

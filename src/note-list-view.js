@@ -7,7 +7,14 @@
   }
 
   NoteListView.prototype.getNotesView = function() {
-    return "<li>" + this.noteList + "<li>"
+    var string = ""
+
+    for (var i = 0; i < this.noteList.notes.length; i++){
+    string += "<li>" + this.noteList.notes[i].text + "<li>"
+    }
+
+    return string;
+
   }
 
   exports.NoteListView = NoteListView;
