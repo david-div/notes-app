@@ -14,8 +14,14 @@
     assert.isEqualTo(note, "Note 2")
   }
 
+  function idIsAddedtoNote(){
+    var idNote1 = noteList.notes[0].id
+    assert.isEqualTo(idNote1, 1)
+  }
+
   addNoteToNoteListTest1();
   addNoteToNoteListTest2();
+  idIsAddedtoNote();
 
 
 })(this)
