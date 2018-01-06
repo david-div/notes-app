@@ -4,7 +4,8 @@
 
   function NoteController(noteList){
     this.noteList = noteList
-    this.view = new NoteListView(noteList)
+    this.noteList.addNote("Favourite drink: seltzer")
+    this.view = new NoteListView(this.noteList)
   }
 
   NoteController.prototype.addToHTML = function () {

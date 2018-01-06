@@ -1,6 +1,7 @@
 (function(exports){
 
-  const noteController = new NoteController()
+  const noteList = new NoteList
+  const noteController = new NoteController(noteList)
 
   function canBeInstansiated(){
     assert.isTrue(noteController instanceof NoteController )
