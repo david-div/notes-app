@@ -8,30 +8,64 @@
 
   <body>
 
-    <div id="app"> Hello </div>
+    <div id="app">Hello</div>
+    <div>
+
+    </div>
+    <!-- <a href="" id="#tiger">Tiger</a>
+    <div id="animal"></div> -->
+
     <ul id="list">
     </ul>
 
     <script src ="./src/note-model.js"></script>
     <script src ="./src/note-list-view.js"></script>
-    <script src ="./src/note-controller.js"></script>
     <script src ="./src/note-list-model.js"></script>
+    <script src ="./src/note-controller.js"></script>
     <script>
 
-      noteList = new NoteList()
-      noteList.addNote("Note 1")
-      noteList.addNote("Note 2")
-
-      console.log(noteList.notes)
-      console.log(noteList.notes[0].text)
-      console.log(noteList.notes.length)
-
-      noteListView = new NoteListView(noteList)
-      noteController = new NoteController(noteList)
-      console.log(noteController)
+      var noteList = new NoteList()
+      noteList.addNote("So, looks like we have to add the Url")
+      var noteController = new NoteController(noteList)
       noteController.addToHTML();
 
 
+      // makeURLChangeShowAnimalForCurrentPage();
+      //
+      // function makeURLChangeShowAnimalForCurrentPage(){
+      //   window.addEventListener("hashchange", showAnimalForCurrentPage);
+      // }
+      //
+      // function showAnimalForCurrentPage(){
+      //   showAnimal(getAnimalFromUrl(window.location));
+      // }
+      //
+      // function getAnimalFromUrl(location){
+      //   return location.hash.split("#")[1];
+      // }
+      //
+      // function showAnimal(animal){
+      //   document.getElementById("animal")
+      //   .innerHTML = animal
+      // }
+      //
+      //
+      // makeTigerLinkClickSayTiger();
+      //
+      // function makeTigerLinkClickSayTiger(){
+      //   document
+      //   .getElementById("tiger-link")
+      //   .addEventListener("click", function(e){
+      //     e.preventDefault();
+      //     sayTiger();
+      //   })
+      // }
+      //
+      // function sayTiger(){
+      //   document
+      //   .getElementById("animal")
+      //   .innerHTML = "tiger"
+      // }
 
 
     </script>

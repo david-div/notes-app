@@ -8,10 +8,10 @@
 
   NoteListView.prototype.getNotesView = function() {
     var string = ""
-    var noOfNotes = this.noteList.notes.length
+    var notes = this.noteList.notes
 
-    for (var i = 0; i < noOfNotes; i++){
-    string += "<li>" + this.first20Chars(this.noteList.notes[i].text) + "</li>"
+    for (var i = 0; i < notes.length; i++){
+    string += "<li><a href=notes/" + notes[i].id + ">" + this.first20Chars(notes[i].text) + "</a></li>"
     }
 
     return string;
