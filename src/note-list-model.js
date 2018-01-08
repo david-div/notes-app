@@ -11,9 +11,8 @@
 
   NoteList.prototype.addNote = function (text) {
     var newNote = new Note(text, this.id)
-    this.id += 1
     this.notes.push(newNote)
-
+    this.id += 1
   };
 
   exports.NoteList = NoteList;

@@ -21,6 +21,7 @@
     <script src ="./src/note-model.js"></script>
     <script src ="./src/note-list-view.js"></script>
     <script src ="./src/note-list-model.js"></script>
+    <script src ="./src/note-view.js"></script>
     <script src ="./src/note-controller.js"></script>
     <script>
 
@@ -28,6 +29,7 @@
       noteList.addNote("So, looks like we have to add the Url")
       var noteController = new NoteController(noteList)
       noteController.addToHTML();
+      noteController.showFullNoteForCurrentPage();
 
 
       // makeURLChangeShowAnimalForCurrentPage();
