@@ -5,7 +5,7 @@
   }
 
   SingleNoteView.prototype.stringOfHTML = function () {
-    return "<div>" + this.note.text + "</div>"
+    return "<div>" + this.noteModel + "</div>"
   }
 
   exports.SingleNoteView = SingleNoteView;

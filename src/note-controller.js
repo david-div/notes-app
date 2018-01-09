@@ -5,19 +5,34 @@
   function NoteController(noteList){
     this.noteList = noteList
     this.noteList.addNote("Favourite drink: seltzer")
-    this.view = new NoteListView(this.noteList)
-    this.singleNoteView = new SingleNoteView()
+    this.noteList.addNote("Favourite food: chicken nuggets")
   }
 
   // adds shortened notes to DOM
   NoteController.prototype.addToHTML = function () {
-    app.innerHTML = this.view.getNotesView();
+    app.innerHTML = new NoteListView(this.noteList).getNotesView();
   };
 
-  NoteController.prototype.showNoteText = function (){
+  // returns the note based on id
+  NoteController.prototype.getNoteText = function (){
     var noteId = window.location.hash.split("/")[1]
-    var note =  this.noteList.notes[noteId].text
-    app.innerHTML = note
+    var text =  this.noteList.notes[noteId].text
+    return text
+  }
+
+  NoteController.prototype.showNoteText = function () {
+    var text = this.getNoteText()
+    var singleNoteView = new SingleNoteView(text)
+    app.innerHTML = singleNoteView.stringOfHTML();
+  };
+
+  NoteController.prototype.showFullNoteForCurrentPage = function () {
+    var that = this;
+    var note = function(){
+      that.showNoteText();
+    }
+
+    window.addEventListener("hashchange", not )
   }
 
   exports.NoteController = NoteController;
