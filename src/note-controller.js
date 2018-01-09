@@ -4,8 +4,6 @@
 
   function NoteController(noteList){
     this.noteList = noteList
-    this.noteList.addNote("Favourite drink: seltzer")
-    this.noteList.addNote("Favourite food: chicken nuggets")
   }
 
   // adds shortened notes to DOM
@@ -23,7 +21,7 @@
   NoteController.prototype.showNoteText = function () {
     var text = this.getNoteText()
     var singleNoteView = new SingleNoteView(text)
-    app.innerHTML = singleNoteView.stringOfHTML();
+    app.innerHTML = singleNoteView.showFullNote();
   };
 
   NoteController.prototype.showFullNoteForCurrentPage = function () {
@@ -32,7 +30,7 @@
       that.showNoteText();
     }
 
-    window.addEventListener("hashchange", not )
+    window.addEventListener("hashchange", note)
   }
 
   exports.NoteController = NoteController;

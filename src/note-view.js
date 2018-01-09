@@ -4,7 +4,7 @@
     this.noteModel = noteModel
   }
 
-  SingleNoteView.prototype.stringOfHTML = function () {
+  SingleNoteView.prototype.showFullNote = function () {
     return "<div>" + this.noteModel + "</div>"
   }
 
