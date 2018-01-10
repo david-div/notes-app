@@ -40,6 +40,7 @@
     var that = this;
     var addNewNote = function(newNote){
       that.noteList.addNote(newNote)
+      that.addToHTML();
     }
 
     textNote.addEventListener("submit", function(e){
