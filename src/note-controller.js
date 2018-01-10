@@ -33,6 +33,15 @@
     window.addEventListener("hashchange", note)
   }
 
+
+  NoteController.prototype.submitHandler = function () {
+    var textNote = document.getElementById("text")
+    document.addEventListener("submit", function(e){
+      e.preventDefault();
+      console.log(e)
+    })
+  }
+
   exports.NoteController = NoteController;
 
 

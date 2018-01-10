@@ -18,7 +18,7 @@
     <ul id="list">
     </ul>
 
-    <form id="text" action="#/new_note" method="post">
+    <form id="text" action="/new_note" method="post">
       <textarea name="new-note"></textarea>
       <input type="submit" value="Add note" />
     </form>
@@ -38,6 +38,7 @@
       var noteController = new NoteController(noteList)
       noteController.addToHTML();
       noteController.showFullNoteForCurrentPage();
+      noteController.submitHandler();
 
 
       // makeURLChangeShowAnimalForCurrentPage();
