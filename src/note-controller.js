@@ -36,9 +36,16 @@
 
   NoteController.prototype.submitHandler = function () {
     var textNote = document.getElementById("text")
-    document.addEventListener("submit", function(e){
+
+    var that = this;
+    var addNewNote = function(newNote){
+      that.noteList.addNote(newNote)
+    }
+
+    textNote.addEventListener("submit", function(e){
       e.preventDefault();
-      console.log(e)
+      var newNote = e.srcElement[0].value
+      addNewNote(newNote);
     })
   }
 
