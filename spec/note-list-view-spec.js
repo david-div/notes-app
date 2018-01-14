@@ -21,8 +21,8 @@
     assert.isEqualTo(view, "<li>" + note20Car + "</li>")
   }
 
-  getNotesViewTest();
-  getNotesViewHas20CharsTest();
+  // getNotesViewTest();
+  // getNotesViewHas20CharsTest();
 
 
 
